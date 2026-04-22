@@ -1,0 +1,416 @@
+/* ===== CSS Variables – Professional Palette ===== */
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #242424;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1a1;
+  --text-tertiary: #6b6b6b;
+  --accent: #2596be;
+  --accent-hover: #1d7a99;
+  --success: #10b981;
+  --border: #2a2a2a;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 8px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding-bottom: 80px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Header ===== */
+.app-header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header-content .subtitle {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+/* ===== Tab Bar ===== */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+  padding: var(--spacing-md) 0;
+  z-index: 100;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tab-btn.active {
+  color: var(--accent);
+}
+
+/* ===== Content ===== */
+.section {
+  padding: var(--spacing-lg);
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ===== Cards – Minimal ===== */
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ===== Buttons – Clean ===== */
+.btn {
+  background: var(--accent);
+  color: var(--text-primary);
+  border: none;
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+/* ===== Workout Cards ===== */
+.workout-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.workout-card:active {
+  border-color: var(--accent);
+}
+
+.workout-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.workout-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.workout-card .meta {
+  display: flex;
+  gap: var(--spacing-md);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* ===== Exercise Cards ===== */
+.exercise-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.exercise-card.completed {
+  border-color: var(--success);
+  opacity: 0.7;
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.exercise-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.exercise-header .muscle-tag {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+/* ===== Input Fields – Minimal ===== */
+.input-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.input-row {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.input-row input {
+  flex: 1;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input-row input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.input-row input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* ===== PR Badge – Subtle ===== */
+.pr-badge {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+/* ===== Equipment Grid ===== */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.equipment-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.equipment-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  background: var(--bg-tertiary);
+}
+
+.equipment-card .info {
+  padding: var(--spacing-md);
+}
+
+.equipment-card .info h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.equipment-card .info .category {
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+}
+
+.equipment-card .info .exercises {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Stats Grid ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+.stat-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.stat-card .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-card .label {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* ===== Progress Bar – Minimal ===== */
+.progress-bar {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  height: 4px;
+  margin-top: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.3s;
+}
+
+/* ===== Exercise List Item ===== */
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.exercise-item:last-child {
+  border-bottom: none;
+}
+
+.exercise-item span:first-child {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+/* ===== Toast – Subtle ===== */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.toast.success {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .equipment-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== iPhone Safe Area ===== */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .tab-bar {
+    padding-bottom: calc(var(--spacing-md) + env(safe-area-inset-bottom));
+  }
+  
+  body {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
