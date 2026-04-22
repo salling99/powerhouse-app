@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2596be">
+  <title>Power House Denmark</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1>💪 Power House</h1>
+    <p class="subtitle">Danmark</p>
+  </header>
+
+  <!-- Main Navigation -->
+  <nav class="tab-bar">
+    <button class="tab-btn active" data-tab="home">🏠 Home</button>
+    <button class="tab-btn" data-tab="workout">🏋️ Workout</button>
+    <button class="tab-btn" data-tab="progress">📈 Progress</button>
+    <button class="tab-btn" data-tab="equipment">🛠️ Equipment</button>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main id="app-content">
+    <!-- Content injected by JavaScript -->
+  </main>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
